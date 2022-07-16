@@ -27,7 +27,7 @@ class BookingServiceTest {
     public void setup(){
         LocalDate checkIn = LocalDate.parse("2022-08-01");
         LocalDate checkOut = LocalDate.parse("2022-08-30");
-        BookingModel bookingModel = new BookingModel("1", "Natan", checkIn, checkOut, 10);
+        BookingModel bookingModel = new BookingModel(1L, "Natan", checkIn, checkOut, 10);
     when(bookingRepository.findByReserveName(bookingModel.getReserveName())).thenReturn(Optional.of(bookingModel));
     }
 

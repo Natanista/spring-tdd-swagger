@@ -1,5 +1,6 @@
 package com.example.springboottddswagger.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,9 +19,12 @@ import static javax.persistence.GenerationType.AUTO;
 public class BookingModel {
     @Id
     @GeneratedValue(strategy = AUTO)
-    private String id;
+    @JsonIgnore
+    private Long id;
     private String reserveName;
     private LocalDate checkIn;
     private LocalDate checkOut;
     private Integer numberGuests;
+
+
 }
